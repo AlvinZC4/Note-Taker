@@ -1,10 +1,11 @@
 const generateId = require("./noteid")
 
-class Notes {
-    constructor(content) {
-        this.content = content
+class Note {
+    constructor(title, text) {
         this.id = generateId()
+        this.title = title
+        this.text = text
     }
 }
 
-module.exports = Notes
+module.exports = Note

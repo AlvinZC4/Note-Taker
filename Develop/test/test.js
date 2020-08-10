@@ -10,6 +10,6 @@ const Note = require("../public/notes")
 
 // console.log(notes)
 
-const note1 = new Note("Hey there")
+const note1 = new Note("My New Note", "Hi There")
 
 console.log(note1)
