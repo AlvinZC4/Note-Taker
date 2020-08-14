@@ -4,7 +4,7 @@ const fs = require("fs")
 const Note = require("./public/notes")
 
 const app = express()
-const PORT = 8080
+const PORT = process.env.PORT || 3001
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -22,10 +22,7 @@ app.get("/api/notes", function(req, res) {
             return console.log(err)
         }
         let allNotes = JSON.parse(data)
-        // console.log(allNotes)
         notes = allNotes
-
-        console.log("Our notes are loaded: ", notes)
         res.json(notes)
     })
 })
@@ -34,7 +31,6 @@ app.post("/api/notes", function(req, res){
     let addNote = req.body
     const newNote = new Note(addNote.title, addNote.text)
     notes.push(newNote)
-    console.log("New note added to array: ", notes)
     let notesStringify = JSON.stringify(notes)
 
     fs.writeFile(path.join(__dirname, "/db/db.json"), notesStringify, function(err){
@@ -47,14 +43,10 @@ app.post("/api/notes", function(req, res){
 })
 
 app.delete("/api/notes/:noteId", function(req, res) {
-    // console.log("DELETE route has been hit")
-    // res.end()
     let noteId = req.params.noteId
-    console.log("ID for the note to delete: ", noteId)
     
     let noteDel = notes.filter(del => del.id !== noteId)
     notes = noteDel
-    console.log("Note has been removed", notes)
     let notesStringify = JSON.stringify(notes)
 
     fs.writeFile(path.join(__dirname, "/db/db.json"), notesStringify, function(err){
@@ -66,7 +58,6 @@ app.delete("/api/notes/:noteId", function(req, res) {
     })
 })
 
-
 // Routes
 
 app.get("/notes", function(req, res) {
@@ -76,10 +67,6 @@ app.get("/notes", function(req, res) {
 app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "public/index.html"))
 })
-
-
-
-
 
 
 app.listen(PORT, function() {
