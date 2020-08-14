@@ -44,8 +44,27 @@ app.post("/api/notes", function(req, res){
         res.writeHead(200)
         res.end()
     })
-    })
+})
 
+app.delete("/api/notes/:noteId", function(req, res) {
+    // console.log("DELETE route has been hit")
+    // res.end()
+    let noteId = req.params.noteId
+    console.log("ID for the note to delete: ", noteId)
+    
+    let noteDel = notes.filter(del => del.id !== noteId)
+    notes = noteDel
+    console.log("Note has been removed", notes)
+    let notesStringify = JSON.stringify(notes)
+
+    fs.writeFile(path.join(__dirname, "/db/db.json"), notesStringify, function(err){
+        if (err) {
+            console.log(err)
+        }
+        res.writeHead(200)
+        res.end()
+    })
+})
 
 
 // Routes
