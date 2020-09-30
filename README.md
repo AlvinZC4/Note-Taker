@@ -32,11 +32,11 @@
 
   ## Test Code
 
-  No test were created during the development of this application
+  No test were created during the development of this application.
 
   ## Contribution Guidelines
 
-  Please check your code for errors before making a merge request
+  Please check your code for errors before making a merge request.
 
   ## Ask Questions
 
