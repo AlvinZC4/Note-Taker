@@ -19,7 +19,7 @@
 
   ## Installation
 
-  Simply navigate your web browser to the following link: https://protected-lake-56546.herokuapp.com/
+  Simply navigate your web browser to the following link: <https://protected-lake-56546.herokuapp.com/>
   
 
   ## How to Use This Application
