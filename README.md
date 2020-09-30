@@ -26,7 +26,7 @@
 
   When you launch the application press the get started button to navigate where your notes are created, saved, and stored. Once you are there click on the pencil on the top right of the page to create a new note. This will allow you to edit the fields necessary to create a note.
   
-  You can give your note a short title and directly below the title type the text for your note. Once you are finished you can save the note you have created. All saved notes appear on the left side of the page. You may click on the title of a saved note to display its content or you may click on the image of a trash can to delete the note.
+  You can give your note a short title and directly below the title type the text for your note. Once you are finished you can save the note you have created. All saved notes appear on the left side of the page. By clicking on the title of a saved note on the left side of the screen you will be able to view its content.
 
   ![Application in use](/images/notetaker.png)
 
