@@ -1,6 +1,6 @@
 # The Good Note Taker
 
-  The Good Note Taker is an application that helps the user keep track of his or her thoughts by allowing them to write notes, save notes, and delete notes.
+  The Good Note Taker is an application that helps the user keep track of his or her thoughts by allowing them to write, save, and delete notes.
 
   ![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)
 
